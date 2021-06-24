@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2D35B02E2683ACA700DDC385 /* SwiftUI_GoodWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35B02D2683ACA700DDC385 /* SwiftUI_GoodWeatherApp.swift */; };
-		2D35B0302683ACA700DDC385 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35B02F2683ACA700DDC385 /* ContentView.swift */; };
+		2D35B0302683ACA700DDC385 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35B02F2683ACA700DDC385 /* WeatherView.swift */; };
 		2D35B0322683ACAB00DDC385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D35B0312683ACAB00DDC385 /* Assets.xcassets */; };
 		2D35B0352683ACAB00DDC385 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D35B0342683ACAB00DDC385 /* Preview Assets.xcassets */; };
 		2D35B0402683ACAC00DDC385 /* SwiftUI_GoodWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35B03F2683ACAC00DDC385 /* SwiftUI_GoodWeatherTests.swift */; };
 		2D35B04B2683ACAC00DDC385 /* SwiftUI_GoodWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35B04A2683ACAC00DDC385 /* SwiftUI_GoodWeatherUITests.swift */; };
+		2D35B0602683B0C500DDC385 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35B05F2683B0C500DDC385 /* Weather.swift */; };
+		2D35B0682683B13400DDC385 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35B0672683B13400DDC385 /* WeatherService.swift */; };
+		2D35B06E2683BD2600DDC385 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35B06D2683BD2600DDC385 /* WeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,7 @@
 /* Begin PBXFileReference section */
 		2D35B02A2683ACA700DDC385 /* SwiftUI-GoodWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-GoodWeather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D35B02D2683ACA700DDC385 /* SwiftUI_GoodWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_GoodWeatherApp.swift; sourceTree = "<group>"; };
-		2D35B02F2683ACA700DDC385 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2D35B02F2683ACA700DDC385 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		2D35B0312683ACAB00DDC385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D35B0342683ACAB00DDC385 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D35B0362683ACAB00DDC385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		2D35B0462683ACAC00DDC385 /* SwiftUI-GoodWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-GoodWeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D35B04A2683ACAC00DDC385 /* SwiftUI_GoodWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_GoodWeatherUITests.swift; sourceTree = "<group>"; };
 		2D35B04C2683ACAC00DDC385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D35B05F2683B0C500DDC385 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		2D35B0672683B13400DDC385 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		2D35B06D2683BD2600DDC385 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D308D0F2684713B00C88797 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D35B02F2683ACA700DDC385 /* WeatherView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2D35B0212683ACA700DDC385 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +109,11 @@
 		2D35B02C2683ACA700DDC385 /* SwiftUI-GoodWeather */ = {
 			isa = PBXGroup;
 			children = (
+				2D35B05C2683B05C00DDC385 /* Models */,
+				2D308D0F2684713B00C88797 /* Views */,
+				2D35B06C2683BD1800DDC385 /* ViewModel */,
+				2D35B05E2683B06D00DDC385 /* Services */,
 				2D35B02D2683ACA700DDC385 /* SwiftUI_GoodWeatherApp.swift */,
-				2D35B02F2683ACA700DDC385 /* ContentView.swift */,
 				2D35B0312683ACAB00DDC385 /* Assets.xcassets */,
 				2D35B0362683ACAB00DDC385 /* Info.plist */,
 				2D35B0332683ACAB00DDC385 /* Preview Content */,
@@ -128,6 +145,30 @@
 				2D35B04C2683ACAC00DDC385 /* Info.plist */,
 			);
 			path = "SwiftUI-GoodWeatherUITests";
+			sourceTree = "<group>";
+		};
+		2D35B05C2683B05C00DDC385 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D35B05F2683B0C500DDC385 /* Weather.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D35B05E2683B06D00DDC385 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2D35B0672683B13400DDC385 /* WeatherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2D35B06C2683BD1800DDC385 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D35B06D2683BD2600DDC385 /* WeatherViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D35B0302683ACA700DDC385 /* ContentView.swift in Sources */,
+				2D35B06E2683BD2600DDC385 /* WeatherViewModel.swift in Sources */,
+				2D35B0682683B13400DDC385 /* WeatherService.swift in Sources */,
+				2D35B0302683ACA700DDC385 /* WeatherView.swift in Sources */,
+				2D35B0602683B0C500DDC385 /* Weather.swift in Sources */,
 				2D35B02E2683ACA700DDC385 /* SwiftUI_GoodWeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
